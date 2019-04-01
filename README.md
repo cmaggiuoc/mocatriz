@@ -3,7 +3,7 @@
 # Grup : Joan A. Maggi Gómez i Carles Maggi Gómez (THEMAGGICIANS)
 ## Repositori per la creació de la pràctica tipologia i cicle de vida de les dades
 
-## feedback.py
+## main.py
 
 ## Instal·lació de paquets
 Per instal·lar el pip3 actualitzat cal executar el programa  get-pip.py
@@ -22,7 +22,7 @@ pip3 install builtwith
 L'scrip s'ha ejecutar de la següent manera :
 ```
 
-python feedback.py 
+python main.py --nhotels 30
 
 ```
 

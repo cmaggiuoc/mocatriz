@@ -95,7 +95,7 @@ for i in range(1, max_pag+1, 1):
 		hotel_puntuacio=div_hotel['data-score']
 		link = div_hotel.find('a', {'class': ['hotel_name_link', 'url']})
 		url_hotel='https://www.booking.com' + link.get('href').split(";")[0].replace('\n','')
-		hotel_name=link.find('span',class_='sr-hotel__name').text.replace('\n
+		hotel_name=link.find('span',class_='sr-hotel__name').text.replace('\n','')
 		
 		#Anem a buscar la pàgina de l'hotel per adquirir les propietats de les facilities
 		r= requests.get(url_hotel)

@@ -5,6 +5,7 @@ import argparse
 import re
 import math
 import builtwith
+import whois
 from datetime import datetime
 from datetime import timedelta
 from bs4 import BeautifulSoup
@@ -28,14 +29,26 @@ tecnologia = builtwith.builtwith('https://www.booking.com')
 
 print(tecnologia)
 
+## Grandaria ###
 
+
+grandaria ="https://www.google.es/search?source=hp&ei=wrqjXICQOsyblwTw6avgAw&q=site%3Awww.booking.com&btnK=Buscar+con+Google&oq=site%3Awww.booking.com&gs_l=psy-ab.3...3527.8692..9067...0.0..0.55.978.20......0....1..gws-wiz.....0..0i131j0j0i3j0i10.h2_32y7cUoo"
+
+g=requests.get(grandaria)
+soup = BeautifulSoup(g.content,features="lxml")
+t=soup.find('div', {'id': ['resultStats']})
+print(t) 
+
+### Propietari de la pàgina
+
+print(whois.whois)('https://www.booking.com')
 
 #Preguntem per entrada el nombre d'hotels, en múltiples de 15 
 parser = argparse.ArgumentParser()
 parser.add_argument("--nhotels", help="Introdueix el nombre d'hotels de bcn a escrapear (mínim 15)")
 args = parser.parse_args()
 
-#CCrida request a la pagina on hi ha els hotels de Barcelona 
+#Crida request a la pagina on hi ha els hotels de Barcelona 
 sisapUrl="https://www.booking.com/searchresults.es.html?label=gen173nr-1DCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBA-gBAfgBAogCAagCA7gC0NvZ5AXAAgE;sid=bed493c85d8693a2b7074f734f20b8fc;closed_msg=584507;dest_id=-372490;dest_type=city;hlrd=14&"
 r = requests.get(sisapUrl)
 

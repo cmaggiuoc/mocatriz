@@ -11,37 +11,54 @@ from datetime import timedelta
 from bs4 import BeautifulSoup
 
 
-## Avaluem el robots.txt
+## Avaluem el robots.txt ##
 
 page=requests.get("https://www.booking.com/robots.txt")
 if page.status_code == 200:
 	souprob = BeautifulSoup(page.content)
 	robottxt= souprob.prettify()
-	print(robottxt)
-
+	
+#Guardem les dades en un fitxer de text
+	r = open ('consideracions.txt','w')
+	r.write(robottxt)
+	r.close()
 else:
 	print ("Error en la URL")
 
 
-### Mirem quina tecnologia fa servir el lloc
+## Tecnologia ##
 
 tecnologia = builtwith.builtwith('https://www.booking.com')
 
-print(tecnologia)
+#Guardem les dades en un fitxer de text
+
+r = open('consideracions.txt','a')
+r.write('\n' + 'Tecnologia : ' )
+r.write(str(tecnologia))
+r.close()
 
 ## Grandaria ###
 
+url ="https://www.google.es/search?source=hp&ei=wrqjXICQOsyblwTw6avgAw&q=site%3Awww.booking.com&btnK=Buscar+con+Google&oq=site%3Awww.booking.com&gs_l=psy-ab.3...3527.8692..9067...0.0..0.55.978.20......0....1..gws-wiz.....0..0i131j0j0i3j0i10.h2_32y7cUoo"
 
-grandaria ="https://www.google.es/search?source=hp&ei=wrqjXICQOsyblwTw6avgAw&q=site%3Awww.booking.com&btnK=Buscar+con+Google&oq=site%3Awww.booking.com&gs_l=psy-ab.3...3527.8692..9067...0.0..0.55.978.20......0....1..gws-wiz.....0..0i131j0j0i3j0i10.h2_32y7cUoo"
+page=requests.get(url)
+soup = BeautifulSoup(page.content,features="lxml")
+tamany=soup.find(id="resultStats")
 
-g=requests.get(grandaria)
-soup = BeautifulSoup(g.content,features="lxml")
-t=soup.find('div', {'id': ['resultStats']})
-print(t) 
+#Guardem les dades en un fitxer de text 
+r = open('consideracions.txt','a')
+r.write('\n' + 'Grandaria : ' )
+r.write(tamany.string)
+r.close()
 
-### Propietari de la pàgina
+## Propietari de la pàgina ##
 
-print(whois.whois)('https://www.booking.com')
+#Guardem les dades del propietari en un fitxer de text 
+r = open('consideracions.txt','a')
+r.write('\n' + 'Propietari : ' )
+r.write(str((whois.whois)('https://www.booking.com')))
+r.close()
+
 
 #Preguntem per entrada el nombre d'hotels, en múltiples de 15 
 parser = argparse.ArgumentParser()

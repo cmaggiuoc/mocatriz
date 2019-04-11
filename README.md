@@ -1,7 +1,34 @@
+
 # Repositori :mocatriz
 # PRACTICA 1era Part
-# Practica realizada per  : Joan A. Maggi Gómez i Carles Maggi Gómez (THEMAGGICIANS)
+# Practica realizada per  : (THEMAGGICIANS) 
+	## Joan A. Maggi Gómez 
+	## Carles Maggi Gómez 
 ## Repositori per la  pràctica Tipologia i Ccicle de Vida de les Dades
+
+## Instal·lació de paquets
+Per instal·lar el pip3 actualitzat cal executar el programa  get-pip.py
+
+```import os
+import requests
+import csv
+import argparse
+import re
+import math
+import builtwith
+import whois
+import sys
+from datetime import datetime
+from datetime import timedelta
+from bs4 import BeautifulSoup
+```
+L'scrip s'ha ejecutar de la següent manera :
+python main.py --nhotels 30
+```
+Crear tres fitxers de sortia.
+Consideracions.txt 	: Contingut de totes les dades relacionades amb el context
+urls_xml.txt		: Urls dels sitemap, per si cal tractar-les més endevant.
+nomdelfitxer.csv	: nomdelfitxer.csv on es guarden el resultats de la cerca en la web. 
 
 # Descripció de la Pràctica a realitzar
 L'objectiu d'aquesta practica es  la creació d'un dataset a partir de les dades
@@ -55,36 +82,7 @@ under Database Contents License
 
 ## main.py
 
-## Instal·lació de paquets
-Per instal·lar el pip3 actualitzat cal executar el programa  get-pip.py
 
-
-Per ejecutar l'script cal instal·lar aquest paquets 
-
-```
-import os
-import requests
-import csv
-import argparse
-import re
-import math
-import builtwith
-import whois
-import sys
-from datetime import datetime
-from datetime import timedelta
-from bs4 import BeautifulSoup
-
-L'scrip s'ha ejecutar de la següent manera :
-```
-
-python main.py --nhotels 30
-
-```
-Crear tres fitxers de sortia.
-Consideracions.txt 	: Contingut de totes les dades relacionades amb el context
-urls_xml.txt		: Urls dels sitemap, per si cal tractar-les més endevant.
-nomdelfitxer.csv	: nomdelfitxer.csv on es guarden el resultats de la cerca en la web. 
 
 
 

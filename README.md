@@ -3,9 +3,9 @@
 ## Repositori
 mocatriz
 ## Autors
+***Carles Maggi Gómez***   
+***Joan A. Maggi Gómez***  
 *THEMAGGICIANS* 
-***Carles Maggi Gómez*** 
-***Joan A. Maggi Gómez*** 
 ## Repositori per la  pràctica
 mocatriz 
 ## Programari utilitzat

@@ -1,13 +1,17 @@
-# 1era Part de la Pràctiva de Tipologia i Cicle de Vida de les Dades
-# Repositori :mocatriz
-# Realitzada per  : *(THEMAGGICIANS)* 
-## Carles Maggi Gómez 
-## Joan A. Maggi Gómez 
+# Pràctica de Tipologia i Cicle de Vida de les Dades
+1era Part
+## Repositori
+mocatriz
+## Autors
+*THEMAGGICIANS* 
+***Carles Maggi Gómez*** 
+***Joan A. Maggi Gómez*** 
 ## Repositori per la  pràctica
 mocatriz 
 ## Programari utilitzat
 Python 3.7 64 Bits
-
+## SO
+Windows 10 64 Bits
 ## Instal·lació de paquets
 Per instal·lar el pip3 actualitzat cal executar el programa get-pip.py
 ```

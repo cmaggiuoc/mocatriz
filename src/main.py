@@ -6,25 +6,41 @@ import re
 import math
 import builtwith
 import whois
+import sys
 from datetime import datetime
 from datetime import timedelta
 from bs4 import BeautifulSoup
 
 
+
 ## Avaluem el robots.txt ##
 
-page=requests.get("https://www.booking.com/robots.txt")
+page=requests.get("https://wwww.booking.com/robots.txt")
 if page.status_code == 200:
-	souprob = BeautifulSoup(page.content)
+	souprob = BeautifulSoup(page.content,'html.parser')
 	robottxt= souprob.prettify()
-	
 #Guardem les dades en un fitxer de text
 	r = open ('consideracions.txt','w')
 	r.write(robottxt)
 	r.close()
 else:
 	print ("Error en la URL")
+	sys.exit()
 
+## Guardo las urls del xml del sitema en el fitxer"
+
+urls_xml = open ('urls.txt','w')
+text=souprob.text
+soupsite_raw= (souprob.text).split("\n")
+fin =len(soupsite_raw)
+for i in  range(0,fin):
+	if soupsite_raw[i][:7]=="Sitemap":
+		if range == fin:
+			urls_xml.write(soupsite_raw[i][9:])
+		else:
+			urls_xml.write(soupsite_raw[i][9:] + '\n')
+
+urls_xml.close()
 
 ## Tecnologia ##
 

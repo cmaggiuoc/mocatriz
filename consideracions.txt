@@ -1,0 +1,252 @@
+Sitemap: https://www.booking.com/sitembk-articles-index-articles-https.xml
+Sitemap: https://www.booking.com/sitembk-zh-index-https.xml
+Sitemap: https://www.booking.com/sitembk-reviews-index-country-review-https.xml
+Sitemap: https://www.booking.com/sitembk-reviews-index-city-review-https.xml
+Sitemap: https://www.booking.com/sitembk-reviews-index-single-review-https.xml
+Sitemap: https://www.booking.com/sitembk-reviews-index-region-review-https.xml
+Sitemap: https://www.booking.com/sitembk-reviews-index-hotel-review-https.xml
+Sitemap: https://www.booking.com/sitembk-index-https.xml
+Sitemap: https://www.booking.com/sitembk-incr-closed-index-hotel-reviews-https_2017-04-21.xml
+Sitemap: https://www.booking.com/sitembk-incr-closed-index-hotel-reviews-https_2017-04-20.xml
+Sitemap: https://www.booking.com/sitembk-dsf-index-destinationfinder-https.xml
+Sitemap: https://www.booking.com/sitembk-index-themed-https.xml
+Sitemap: https://www.booking.com/sitembk-discover-https-index.xml
+Sitemap: https://www.booking.com/sitembk-airport-index.xml
+Sitemap: https://www.booking.com/sitembk-city-index.xml
+Sitemap: https://www.booking.com/sitembk-country-index.xml
+Sitemap: https://www.booking.com/sitembk-district-index.xml
+Sitemap: https://www.booking.com/sitembk-hotel-index.xml
+Sitemap: https://www.booking.com/sitembk-landmark-index.xml
+Sitemap: https://www.booking.com/sitembk-region-index.xml
+Sitemap: https://www.booking.com/sitembk-tourism-index.xml
+Sitemap: https://www.booking.com/sitembk-communities-index.xml
+Sitemap: https://www.booking.com/sitembk-cars-index.xml
+
+User-agent: psbot
+Disallow: /
+
+User-agent: TurnitinBot
+Disallow: /
+
+User-agent: NPBot-1/2.0
+Disallow: /
+
+User-agent: NPBot
+Disallow: /
+
+User-agent: YandexDirect
+Allow: /
+
+User-agent: Yandex
+Sitemap: https://www.booking.com/sitembk-ya-articles-index-articles-https.xml
+Sitemap: https://www.booking.com/sitembk-ya-index-https.xml
+Sitemap: https://www.booking.com/sitembk-ya-dsf-index-destinationfinder-https.xml
+Allow: /$
+Allow: /*.en-gb.html
+Allow: /*lang=en-gb
+Allow: /*.ru.html
+Allow: /*lang=ru
+Allow: /*.tr.html
+Allow: /*lang=tr
+Disallow: /sitembk-https-index.xml
+Disallow: /sitembk-discover-https-index.xml
+Disallow: /sitembk-reviews-https-index.xml
+Disallow: /sitembk-dsf-https-index-destinationfinder.xml
+Disallow: /sitembk-articles-https-index-articles.xml
+Disallow: /reviewlist.*.html
+Disallow: /hotelsonmap.*.json
+Disallow: /general.*
+Disallow: /
+
+User-agent: Applebot
+Disallow: /alt_avail*
+Disallow: /honing.html
+Disallow: /photo.html
+Disallow: /photo.en.html
+Disallow: /photo.de.html
+Disallow: /photo.nl.html
+Disallow: /photo.fr.html
+Disallow: /photo.es.html
+Disallow: /photo.it.html
+Disallow: /photo.pt.html
+Disallow: /photo.ja.html
+Disallow: /photo.zh.html
+Disallow: /photo.pl.html
+Disallow: /book.html
+Disallow: /mybooking.html
+Disallow: /confirmation.html
+Disallow: /reviewlist.*.html
+Disallow: /navigation_times
+Disallow: /hotelsonmap.*.json
+Disallow: /general.*
+Disallow: /markers_on_map
+Disallow: /logo
+Disallow: /load_times
+Disallow: /anysearch.*
+Disallow: /region_attractions
+Disallow: /*city_bookings
+Disallow: /*nofollow=1
+Disallow: /flexiproduct
+
+User-agent: AdsBot-Google
+Disallow: /s/
+Allow: /best-price-guarantee/index.*
+Allow: /secure-booking/index.*
+Allow: /get-instant-confirmation/index.*
+Allow: /book-now-pay-later/index.*
+Allow: /no-booking-fees/index.*
+Allow: /we-speak-your-language/index.*
+Allow: /deals-special-offers/index.*
+Allow: /free-cancellation/index.*
+
+User-agent: AdsBot-Google-Mobile
+Disallow: /s/
+Allow: /best-price-guarantee/index.*
+Allow: /secure-booking/index.*
+Allow: /get-instant-confirmation/index.*
+Allow: /book-now-pay-later/index.*
+Allow: /no-booking-fees/index.*
+Allow: /we-speak-your-language/index.*
+Allow: /deals-special-offers/index.*
+Allow: /free-cancellation/index.*
+
+User-agent: YaDirectFetcher
+Disallow: /s/
+
+User-agent: AdIdxBot
+Disallow: /s/
+
+User-agent: *
+Disallow: /alt_avail*
+Disallow: /fragment.*.html
+Disallow: /fragment.html
+Disallow: /fragment.*.json
+Disallow: /fragment.json
+Disallow: /_frdtcr
+Disallow: /go$
+Disallow: /go?*
+Disallow: /honing.html
+Disallow: /photo.html
+Disallow: /photo.en.html
+Disallow: /photo.de.html
+Disallow: /photo.nl.html
+Disallow: /photo.fr.html
+Disallow: /photo.es.html
+Disallow: /photo.it.html
+Disallow: /photo.pt.html
+Disallow: /photo.ja.html
+Disallow: /photo.zh.html
+Disallow: /photo.pl.html
+Disallow: /book.html
+Disallow: /mybooking.html
+Disallow: /confirmation.html
+Disallow: /reviewlist.*.html
+Disallow: /reviewlist.html
+Disallow: /srcompset.*.html
+Disallow: /srcompset.html
+Disallow: /navigation_times
+Disallow: /hotelsonmap.*.json
+Disallow: /general.*
+Disallow: /markers_on_map
+Disallow: /logo
+Disallow: /load_times
+Disallow: /anysearch.*
+Disallow: /region_attractions
+Disallow: /*city_bookings
+Disallow: /*nofollow=1
+Disallow: /flexiproduct
+Disallow: /js_tracking
+Disallow: /join_js_tracking
+Disallow: /track
+Disallow: /episode_times
+Disallow: /event
+Disallow: /hotel_attractions
+Disallow: /gta_impression*
+Disallow: /monthly_minrates*
+Disallow: /sitembk-reviews-https-index.xml
+Disallow: /vpmlogdesktopscreensize
+Disallow: /hotel/us/the-airstream-van.*.html
+Disallow: /best-price-guarantee/index.*
+Disallow: /secure-booking/index.*
+Disallow: /get-instant-confirmation/index.*
+Disallow: /book-now-pay-later/index.*
+Disallow: /no-booking-fees/index.*
+Disallow: /we-speak-your-language/index.*
+Disallow: /deals-special-offers/index.*
+Disallow: /free-cancellation/index.*
+Disallow: /pxgo?*
+Disallow: /pxbook?*
+Disallow: /product_header.html
+
+User-agent: Baiduspider
+Disallow: /sitembk-articles-index-articles-https.xml
+Disallow: /sitembk-reviews-index-country-review-https.xml
+Disallow: /sitembk-reviews-index-city-review-https.xml
+Disallow: /sitembk-reviews-index-single-review-https.xml
+Disallow: /sitembk-reviews-index-region-review-https.xml
+Disallow: /sitembk-reviews-index-hotel-review-https.xml
+Disallow: /sitembk-index-https.xml
+Disallow: /sitembk-incr-closed-index-hotel-reviews-https_2017-04-21.xml
+Disallow: /sitembk-incr-closed-index-hotel-reviews-https_2017-04-20.xml
+Disallow: /sitembk-dsf-index-destinationfinder-https.xml
+Disallow: /sitembk-discover-https-index.xml
+
+Tecnologia : {'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
+Grandaria : Aproximadamente 52.200.000 resultados
+Propietari : {
+  "domain_name": [
+    "BOOKING.COM",
+    "booking.com"
+  ],
+  "registrar": "MarkMonitor, Inc.",
+  "whois_server": "whois.markmonitor.com",
+  "referral_url": null,
+  "updated_date": [
+    "2014-05-28 15:42:13",
+    "2017-01-25 12:34:54-08:00"
+  ],
+  "creation_date": [
+    "1998-04-17 04:00:00",
+    "1998-04-16 21:00:00-07:00"
+  ],
+  "expiration_date": [
+    "2020-04-16 04:00:00",
+    "2020-04-15 21:00:00-07:00"
+  ],
+  "name_servers": [
+    "NS0.BKNGS.COM",
+    "NS1.BKNGS.COM",
+    "NS2.BKNGS.COM",
+    "NS3.BKNGS.COM",
+    "ns3.bkngs.com",
+    "ns2.bkngs.com",
+    "ns0.bkngs.com",
+    "ns1.bkngs.com"
+  ],
+  "status": [
+    "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+    "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+    "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited",
+    "serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited",
+    "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+    "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+    "clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)",
+    "clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)",
+    "clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)",
+    "serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)",
+    "serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)",
+    "serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)"
+  ],
+  "emails": [
+    "abusecomplaints@markmonitor.com",
+    "whoisrequest@markmonitor.com"
+  ],
+  "dnssec": "unsigned",
+  "name": null,
+  "org": "Booking.com B.V.",
+  "address": null,
+  "city": null,
+  "state": null,
+  "zipcode": null,
+  "country": "NL"
+}

@@ -14,12 +14,12 @@ per tal de limitar la mida del resultats.
 	En el fitxer de text consideracions.txt estan totes les dades relatives el context que envolta
 	aquest url.
 	Com a dades més significatives tenin :
-		***Propietari*** : {  "domain_name": [    "BOOKING.COM",    "booking.com"  ], "registrar": "MarkMonitor, Inc.", ....}
-		***Grandaria***  : Aproximadamente 53.400.000 resultados
-		***Tecnologia*** : {'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
-		***Robots.txt*** : El contingut del fitxer estar dins del fitxer consideracions.txt
-		***Sitema***     : El contingut del sitemap està dins del fixer robots.txt, però hem fet un fitxer
-					a part on nomes hi ha les urls del fitxers .xml per si cal tractar-les després.	
+		**Propietari** : {  "domain_name": [    "BOOKING.COM",    "booking.com"  ], "registrar": "MarkMonitor, Inc.", ....}
+		**Grandaria**  : Aproximadamente 53.400.000 resultados
+		**Tecnologia** : {'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
+		**Robots.txt** : El contingut del fitxer estar dins del fitxer consideracions.txt
+		**Sitema***    : El contingut del sitemap està dins del fixer robots.txt, però hem fet un fitxer
+						a part on nomes hi ha les urls del fitxers .xml per si cal tractar-les després.	
 
 
 #2. Definir un títol pel dataset. Triar un títol que sigui descriptiu.
@@ -62,12 +62,18 @@ Per instal·lar el pip3 actualitzat cal executar el programa  get-pip.py
 Per ejecutar l'script cal instal·lar aquest paquets 
 
 ```
-pip3 install pandas
-pip3 install requests
-pip3 install lxml
-pip3 install beautifulsoup4
-pip3 install builtwith
-```
+import os
+import requests
+import csv
+import argparse
+import re
+import math
+import builtwith
+import whois
+import sys
+from datetime import datetime
+from datetime import timedelta
+from bs4 import BeautifulSoup
 
 L'scrip s'ha ejecutar de la següent manera :
 ```
@@ -75,7 +81,10 @@ L'scrip s'ha ejecutar de la següent manera :
 python main.py --nhotels 30
 
 ```
+Crear tres fitxers de sortia.
+Consideracions.txt 	: Contingut de totes les dades relacionades amb el context
+urls_xml.txt		: Urls dels sitemap, per si cal tractar-les més endevant.
+nomdelfitxer.csv	: nomdelfitxer.csv on es guarden el resultats de la cerca en la web. 
 
-Actualment no fa res.
 
 

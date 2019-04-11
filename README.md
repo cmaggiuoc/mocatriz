@@ -36,9 +36,12 @@ contingudes en la web ***www.booking.com*** , concretament del hotels de Barcelo
 per tal de limitar la mida del resultats.
 A partir del numero d'hotels demanats es crean aquest fitxers :
 
-### Consideracions.txt 	: Contingut de totes les dades relacionades amb el context.  
-### urls_xml.txt		: Urls dels sitemap, per si cal tractar-les més endevant.
-### nomdelfitxer.csv	: nomdelfitxer.csv on es guarden el resultats de la cerca en la web. 
+### Consideracions.txt 
+Contingut de totes les dades relacionades amb el context.  
+### urls_xml.txt
+Urls dels sitemap, per si cal tractar-les més endevant.
+### nomdelfitxer.csv
+nomdelfitxer.csv on es guarden el resultats de la cerca en la web. 
 
 
 # 1. Context.

@@ -1,9 +1,12 @@
-# PRACTICA 1era Part
+# 1era Part de la Pràctiva de Tipologia i Cicle de Vida de les Dades
 # Repositori :mocatriz
-# Practica realizada per  : *(THEMAGGICIANS)* 
+# Realitzada per  : *(THEMAGGICIANS)* 
 ## Carles Maggi Gómez 
 ## Joan A. Maggi Gómez 
-## Repositori per la  pràctica Tipologia i Cicle de Vida de les Dades
+## Repositori per la  pràctica
+mocatriz 
+## Programari utilitzat
+Python 3.7 64 Bits
 
 ## Instal·lació de paquets
 Per instal·lar el pip3 actualitzat cal executar el programa get-pip.py
@@ -24,7 +27,7 @@ from bs4 import BeautifulSoup
 L'scrip s'ha ejecutar de la següent manera : python main.py --nhotels 30
 
 # Descripció de la Pràctica a realitzar
-L'objectiu d'aquesta practica es  la creació d'un dataset a partir de les dades
+L'objectiu d'aquesta practica és la creació d'un dataset a partir de les dades
 contingudes en la web ***www.booking.com*** , concretament del hotels de Barcelona,
 per tal de limitar la mida del resultats.
 A partir del numero d'hotels demanats es crean aquest fitxers :
@@ -45,9 +48,9 @@ Aproximadamente 53.400.000 resultados
 ### Tecnologia :
 {'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
 ### Robots.txt :
-El contingut del fitxer estar dins del fitxer *consideracions.txt*
+El contingut del fitxer estar dins del fitxer ***consideracions.txt***
 ### Sitemap    :
-El contingut del sitemap està dins del fixer *robots.txt*, però hem fet el fitxer *urls_xml.txt* a part  
+El contingut del sitemap està dins del fixer ***robots.txt***, però hem fet el fitxer ***urls_xml.txt*** a part  
 on només hi ha les urls del fitxers '.xml' per si cal tractar-les després.	
 
 

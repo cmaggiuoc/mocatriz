@@ -39,14 +39,18 @@ A partir del numero d'hotels demanats es crean aquest fitxers :
 
 # 1. Context.
 ## Consideracions
-	En el fitxer de text consideracions.txt estan totes les dades relatives el context que envolta
-	aquest url.
-	Com a dades més significatives tenin :
-### Propietari : {  "domain_name": [    "BOOKING.COM",    "booking.com"  ], "registrar": "MarkMonitor, Inc.", ....}
-### Grandaria  : Aproximadamente 53.400.000 resultados
-### Tecnologia : {'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
-### Robots.txt : El contingut del fitxer estar dins del fitxer consideracions.txt
-### Sitema    : El contingut del sitemap està dins del fixer robots.txt, però hem fet un fitxer  
+En el fitxer de text consideracions.txt estan totes les dades relatives el context que envolta aquest url.  
+Com a dades més significatives tenin :
+### Propietari :
+{  "domain_name": [    "BOOKING.COM",    "booking.com"  ], "registrar": "MarkMonitor, Inc.", ....}
+### Grandaria  :
+Aproximadamente 53.400.000 resultados
+### Tecnologia :
+{'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
+### Robots.txt :
+El contingut del fitxer estar dins del fitxer consideracions.txt
+### Sitema    :
+El contingut del sitemap està dins del fixer robots.txt, però hem fet un fitxer  
 a part on nomes hi ha les urls del fitxers .xml per si cal tractar-les després.	
 
 

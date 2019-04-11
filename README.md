@@ -32,9 +32,9 @@ contingudes en la web ***www.booking.com*** , concretament del hotels de Barcelo
 per tal de limitar la mida del resultats.
 A partir del numero d'hotels demanats es crean aquest fitxers :
 
-Consideracions.txt 	: Contingut de totes les dades relacionades amb el context
-urls_xml.txt		: Urls dels sitemap, per si cal tractar-les més endevant.
-nomdelfitxer.csv	: nomdelfitxer.csv on es guarden el resultats de la cerca en la web. 
+### Consideracions.txt 	: Contingut de totes les dades relacionades amb el context.  
+### urls_xml.txt		: Urls dels sitemap, per si cal tractar-les més endevant.
+### nomdelfitxer.csv	: nomdelfitxer.csv on es guarden el resultats de la cerca en la web. 
 
 
 # 1. Context.
@@ -42,12 +42,12 @@ nomdelfitxer.csv	: nomdelfitxer.csv on es guarden el resultats de la cerca en la
 	En el fitxer de text consideracions.txt estan totes les dades relatives el context que envolta
 	aquest url.
 	Com a dades més significatives tenin :
-		**Propietari** : {  "domain_name": [    "BOOKING.COM",    "booking.com"  ], "registrar": "MarkMonitor, Inc.", ....}
-		**Grandaria**  : Aproximadamente 53.400.000 resultados
-		**Tecnologia** : {'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
-		**Robots.txt** : El contingut del fitxer estar dins del fitxer consideracions.txt
-		**Sitema***    : El contingut del sitemap està dins del fixer robots.txt, però hem fet un fitxer
-						a part on nomes hi ha les urls del fitxers .xml per si cal tractar-les després.	
+### Propietari : {  "domain_name": [    "BOOKING.COM",    "booking.com"  ], "registrar": "MarkMonitor, Inc.", ....}
+### Grandaria  : Aproximadamente 53.400.000 resultados
+### Tecnologia : {'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
+### Robots.txt : El contingut del fitxer estar dins del fitxer consideracions.txt
+### Sitema    : El contingut del sitemap està dins del fixer robots.txt, però hem fet un fitxer  
+a part on nomes hi ha les urls del fitxers .xml per si cal tractar-les després.	
 
 
 #2. Definir un títol pel dataset. Triar un títol que sigui descriptiu.

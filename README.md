@@ -9,8 +9,7 @@ contingudes en la web ***www.booking.com*** , concretament del hotels de Barcelo
 per tal de limitar la mida del resultats.
 
 
-#1. Context. Explicar en quin context s'ha recol·lectat la informació. Explicar per
-què el lloc web triat proporciona aquesta informació.
+# 1. Context.
 ## Consideracions
 	En el fitxer de text consideracions.txt estan totes les dades relatives el context que envolta
 	aquest url.

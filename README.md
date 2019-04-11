@@ -1,7 +1,5 @@
 # Pràctica de Tipologia i Cicle de Vida de les Dades
 1era Part
-## Repositori
-mocatriz
 ## Autors
 ***Carles Maggi Gómez***   
 ***Joan A. Maggi Gómez***  

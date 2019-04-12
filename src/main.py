@@ -2,8 +2,6 @@
 import requests
 import csv
 import argparse
-import re
-import math
 import builtwith
 from datetime import datetime
 from datetime import timedelta
@@ -11,7 +9,6 @@ from bs4 import BeautifulSoup
 
 
 ## Avaluem el robots.txt
-
 page=requests.get("https://www.booking.com/robots.txt")
 if page.status_code == 200:
 	souprob = BeautifulSoup(page.content)
@@ -36,7 +33,8 @@ parser.add_argument("--nhotels", help="Introdueix el nombre d'hotels de bcn a es
 args = parser.parse_args()
 
 #CCrida request a la pagina on hi ha els hotels de Barcelona 
-sisapUrl="https://www.booking.com/searchresults.es.html?label=gen173nr-1DCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBA-gBAfgBAogCAagCA7gC0NvZ5AXAAgE;sid=bed493c85d8693a2b7074f734f20b8fc;closed_msg=584507;dest_id=-372490;dest_type=city;hlrd=14&"
+#sisapUrl="https://www.booking.com/searchresults.es.html?label=gen173nr-1DCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBA-gBAfgBAogCAagCA7gC0NvZ5AXAAgE;sid=bed493c85d8693a2b7074f734f20b8fc;closed_msg=584507;dest_id=-372490;dest_type=city;hlrd=14&"
+sisapUrl="https://www.booking.com/searchresults.es-ar.html?city=-372490"
 r = requests.get(sisapUrl)
 
 #Obtenim el contingut del request

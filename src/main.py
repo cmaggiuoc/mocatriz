@@ -2,29 +2,78 @@
 import requests
 import csv
 import argparse
+import re
+import math
 import builtwith
+import whois
+import sys
 from datetime import datetime
 from datetime import timedelta
 from bs4 import BeautifulSoup
 
 
-## Avaluem el robots.txt
-page=requests.get("https://www.booking.com/robots.txt")
-if page.status_code == 200:
-	souprob = BeautifulSoup(page.content)
-	robottxt= souprob.prettify()
-	print(robottxt)
 
+## Avaluem el robots.txt ##
+
+page=requests.get("https://wwww.booking.com/robots.txt")
+if page.status_code == 200:
+	souprob = BeautifulSoup(page.content,'html.parser')
+	robottxt= souprob.prettify()
+#Guardem les dades en un fitxer de text
+	r = open ('consideracions.txt','w')
+	r.write(robottxt)
+	r.close()
 else:
 	print ("Error en la URL")
+	sys.exit()
 
+## Guardo las urls del xml del sitema en el fitxer"
 
-### Mirem quina tecnologia fa servir el lloc
+urls_xml = open ('urls.txt','w')
+text=souprob.text
+soupsite_raw= (souprob.text).split("\n")
+fin =len(soupsite_raw)
+for i in  range(0,fin):
+	if soupsite_raw[i][:7]=="Sitemap":
+		if range == fin:
+			urls_xml.write(soupsite_raw[i][9:])
+		else:
+			urls_xml.write(soupsite_raw[i][9:] + '\n')
+
+urls_xml.close()
+
+## Tecnologia ##
 
 tecnologia = builtwith.builtwith('https://www.booking.com')
 
-print(tecnologia)
+#Guardem les dades en un fitxer de text
 
+r = open('consideracions.txt','a')
+r.write('\n' + 'Tecnologia : ' )
+r.write(str(tecnologia))
+r.close()
+
+## Grandaria ###
+
+url ="https://www.google.es/search?source=hp&ei=wrqjXICQOsyblwTw6avgAw&q=site%3Awww.booking.com&btnK=Buscar+con+Google&oq=site%3Awww.booking.com&gs_l=psy-ab.3...3527.8692..9067...0.0..0.55.978.20......0....1..gws-wiz.....0..0i131j0j0i3j0i10.h2_32y7cUoo"
+
+page=requests.get(url)
+soup = BeautifulSoup(page.content,features="lxml")
+tamany=soup.find(id="resultStats")
+
+#Guardem les dades en un fitxer de text 
+r = open('consideracions.txt','a')
+r.write('\n' + 'Grandaria : ' )
+r.write(tamany.string)
+r.close()
+
+## Propietari de la pàgina ##
+
+#Guardem les dades del propietari en un fitxer de text 
+r = open('consideracions.txt','a')
+r.write('\n' + 'Propietari : ' )
+r.write(str((whois.whois)('https://www.booking.com')))
+r.close()
 
 
 #Preguntem per entrada el nombre d'hotels, en múltiples de 15 
@@ -32,9 +81,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--nhotels", help="Introdueix el nombre d'hotels de bcn a escrapear (mínim 15)")
 args = parser.parse_args()
 
-#CCrida request a la pagina on hi ha els hotels de Barcelona 
-#sisapUrl="https://www.booking.com/searchresults.es.html?label=gen173nr-1DCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBA-gBAfgBAogCAagCA7gC0NvZ5AXAAgE;sid=bed493c85d8693a2b7074f734f20b8fc;closed_msg=584507;dest_id=-372490;dest_type=city;hlrd=14&"
-sisapUrl="https://www.booking.com/searchresults.es-ar.html?city=-372490"
+#Crida request a la pagina on hi ha els hotels de Barcelona 
+sisapUrl="https://www.booking.com/searchresults.es.html?label=gen173nr-1DCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBA-gBAfgBAogCAagCA7gC0NvZ5AXAAgE;sid=bed493c85d8693a2b7074f734f20b8fc;closed_msg=584507;dest_id=-372490;dest_type=city;hlrd=14&"
 r = requests.get(sisapUrl)
 
 #Obtenim el contingut del request

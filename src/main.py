@@ -12,10 +12,9 @@ from datetime import timedelta
 from bs4 import BeautifulSoup
 
 
-
+print('Avaluem el robots.txt')
 ## Avaluem el robots.txt ##
-
-page=requests.get("https://wwww.booking.com/robots.txt")
+page=requests.get("https://www.booking.com/robots.txt")
 if page.status_code == 200:
 	souprob = BeautifulSoup(page.content,'html.parser')
 	robottxt= souprob.prettify()
@@ -27,8 +26,8 @@ else:
 	print ("Error en la URL")
 	sys.exit()
 
+print('Guardem informació de Sitemap')
 ## Guardo las urls del xml del sitema en el fitxer"
-
 urls_xml = open ('urls.txt','w')
 text=souprob.text
 soupsite_raw= (souprob.text).split("\n")
@@ -42,8 +41,8 @@ for i in  range(0,fin):
 
 urls_xml.close()
 
+print('Baixem la informació de la tecnologia')
 ## Tecnologia ##
-
 tecnologia = builtwith.builtwith('https://www.booking.com')
 
 #Guardem les dades en un fitxer de text
@@ -53,8 +52,8 @@ r.write('\n' + 'Tecnologia : ' )
 r.write(str(tecnologia))
 r.close()
 
+print('Baixem la informació respecte grandaria del conjunt del domini')
 ## Grandaria ###
-
 url ="https://www.google.es/search?source=hp&ei=wrqjXICQOsyblwTw6avgAw&q=site%3Awww.booking.com&btnK=Buscar+con+Google&oq=site%3Awww.booking.com&gs_l=psy-ab.3...3527.8692..9067...0.0..0.55.978.20......0....1..gws-wiz.....0..0i131j0j0i3j0i10.h2_32y7cUoo"
 
 page=requests.get(url)
@@ -68,6 +67,7 @@ r.write(tamany.string)
 r.close()
 
 ## Propietari de la pàgina ##
+print('Baixem la informació de dades del propietari')
 
 #Guardem les dades del propietari en un fitxer de text 
 r = open('consideracions.txt','a')
@@ -75,91 +75,29 @@ r.write('\n' + 'Propietari : ' )
 r.write(str((whois.whois)('https://www.booking.com')))
 r.close()
 
-
+print('Baixem la informació dels hotels de Barcelona de booking i els seus comentaris')
 #Preguntem per entrada el nombre d'hotels, en múltiples de 15 
 parser = argparse.ArgumentParser()
 parser.add_argument("--nhotels", help="Introdueix el nombre d'hotels de bcn a escrapear (mínim 15)")
 args = parser.parse_args()
-
-#Crida request a la pagina on hi ha els hotels de Barcelona 
-sisapUrl="https://www.booking.com/searchresults.es.html?label=gen173nr-1DCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBA-gBAfgBAogCAagCA7gC0NvZ5AXAAgE;sid=bed493c85d8693a2b7074f734f20b8fc;closed_msg=584507;dest_id=-372490;dest_type=city;hlrd=14&"
-r = requests.get(sisapUrl)
-
-#Obtenim el contingut del request
-soup = BeautifulSoup(r.content,features="lxml")
-
-#Agafem el divs dels hotels
-all_links = []
-div=soup.find_all('div', {'class': ['sr_item','sr_item_new','sr_item_default','sr_property_block','sr_flex_layout','sr_item_no_dates']})
-for div_hotel in div:
-	#Creem el vector de l'hotel
-	hotel_id=div_hotel['data-hotelid']
-	hotel_stars=div_hotel['data-class']
-	hotel_puntuacio=div_hotel['data-score']
-	link = div_hotel.find('a', {'class': ['hotel_name_link', 'url']})
-	url_hotel='https://www.booking.com' + link.get('href').split(";")[0].replace('\n','')
-	hotel_name=link.find('span',class_='sr-hotel__name').text.replace('\n','')
-	
-	#Anem a buscar la pàgina de l'hotel per adquirir les propietats de les facilities
-	r= requests.get(url_hotel)
-	soup2 = BeautifulSoup(r.content,features="lxml")
-	links = soup2.find_all('div',{'class': 'facilitiesChecklistSection'})
-	print("Definint propietat de l'hotel "+ hotel_name)
-	
-	#Per cada facilitie l'afegim al nostre array 
-	for item in links:
-		propietat=item.find('h5').text.strip()
-		elem = [x.text for x in item.find_all('li')]
-		for valor in elem:
-			print("Propietat " + valor.replace('\n','').strip() + " de " + hotel_name )
-			all_links.append([hotel_id,hotel_stars,hotel_puntuacio,hotel_name,url_hotel,propietat,valor.replace('\n','').strip()])
-
-#Busquem dins la paginació l'offset més gran. Veiem per url que offset es un parametre que s'afegeix a la url (offset*15)
-iter=soup.find_all('a', {'class': ['bui-pagination__link sr_pagination_link']})
-#Preparem per afagar la paginació més gran
-if args.nhotels=="":
-	max_pag=0
-	for link in iter:
-		if max_pag<int(link.string) :
-			max_pag=int(link.string)
+if args.nhotels is None:
+	nhotels=0.0
 else:
-	max_pag=int(float(args.nhotels)/15)-1
+	nhotels=float(args.nhotels)	
 
-#Iterem fins al nombre màxim de pàgines, modificant la URL amb el valor d'offset que toqui (arriba fins (max_pag-1)*15)
-for i in range(1, max_pag+1, 1):
-	#Per cada pagina del index, fem un request per obtenir tots els links dels hotels.
-	url='https://www.booking.com/searchresults.es.html?aid=304142&amp;label=gen173nr-1FCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBAegBAfgBAogCAagCA7gC0NvZ5AXAAgE&amp;sid=ab4245efa6cd9b489d059e8c37a9f987&amp;tmpl=searchresults&amp;class_interval=1&amp;closed_msg=584507&amp;dest_id=-372490&amp;dest_type=city&amp;hlrd=14&amp;label_click=undef&amp;raw_dest_type=city&amp;room1=A%2CA&amp;sb_price_type=total&amp;shw_aparth=1&amp;slp_r_match=0&amp;srpvid=ce588cee120e039a&amp;ssb=empty&amp;rows=15&offset='+ str(i*15)
-	r = requests.get(url)
-	soup = BeautifulSoup(r.content,features="lxml")
-	
-	#Agafem els divs dels hotels
-	div=soup.find_all('div', {'class': ['sr_item','sr_item_new','sr_item_default','sr_property_block','sr_flex_layout','sr_item_no_dates']})
-	for div_hotel in div:
-		#Creem el vetor de l'hotel
-		hotel_id=div_hotel['data-hotelid']
-		hotel_stars=div_hotel['data-class']
-		hotel_puntuacio=div_hotel['data-score']
-		link = div_hotel.find('a', {'class': ['hotel_name_link', 'url']})
-		url_hotel='https://www.booking.com' + link.get('href').split(";")[0].replace('\n','')
-		hotel_name=link.find('span',class_='sr-hotel__name').text.replace('\n','')
-		
-		#Anem a buscar la pàgina de l'hotel per adquirir les propietats de les facilities
-		r= requests.get(url_hotel)
-		soup2 = BeautifulSoup(r.content,features="lxml")
-		links = soup2.find_all('div',{'class': 'facilitiesChecklistSection'})
-		print("Definint propietat de l'hotel "+ hotel_name)
+scrapt_booking=hotels_scrapping(nhotels)
+sisapUrl="https://www.booking.com/searchresults.es.html?label=gen173nr-1DCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBA-gBAfgBAogCAagCA7gC0NvZ5AXAAgE;sid=bed493c85d8693a2b7074f734f20b8fc;closed_msg=584507;dest_id=-372490;dest_type=city;hlrd=14&"
+scrapt_booking.inicia_scrapring(sisapUrl)
 
-		#Per cada facilitie l'afegim al nostre array 
-		for item in links:
-			propietat=item.find('h5').text.strip()
-			elem = [x.text for x in item.find_all('li')]
-			for valor in elem:
-				print("Propietat " + valor.replace('\n','').strip() + " de " + hotel_name )
-				all_links.append([hotel_id,hotel_stars,hotel_puntuacio,hotel_name,url_hotel,propietat,valor.replace('\n','').strip()])
-		
-	
-#Escribim el resultat
-with open('out.csv','w',newline='') as f:
+with open('hotels.csv','w',newline='') as f:
 	writer = csv.writer(f)
-	writer.writerows(all_links)
+	writer.writerows(scrapt_booking.llista_hotels)
 f.close()
+
+#Convertim a datafame per problemes d'encoding de la categorització de comentario.
+df = pd.DataFrame(scrapt_booking.llista_comentaris)
+df.to_csv('comentaris.csv', index=False, header=False)
+
+#Convertim a datafame per problemes d'encoding de la categorització de comentario.
+df = pd.DataFrame(scrapt_booking.llista_categoria_comentaris)
+df.to_csv('llista_categories_comentaris.csv', index=False, header=False)

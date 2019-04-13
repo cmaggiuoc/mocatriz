@@ -33,11 +33,11 @@ L'objectiu d'aquesta practica és la creació d'un dataset a partir de les dades
 contingudes en un enllaç de la web ***www.booking.com*** , concretament del hotels de Barcelona,
 per tal de limitar la mida del resultats.
 A partir del numero d'hotels demanats es crean aquest fitxers 
-##hotels.csv
+### HotelsBarcelonaBooking.csv
 Dataset que inclou la llista d'hotels trobats-
-### comentaris.csv
+### ComentarisXHotelsBarcelonaBooking.csv
 Dataset de comentaris per hotel de hotels.csv
-### llista_categoria_comentaris.csv
+### CategoriesXComentariBooking.csv
 Categories assoacides a un comentari d'un hotel, una fila de comentaris.csv
 ### Consideracions.txt 
 Contingut de totes les dades relacionades amb el context.  

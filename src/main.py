@@ -91,15 +91,15 @@ scrapt_booking=hotels_scrapping(nhotels)
 sisapUrl="https://www.booking.com/searchresults.es.html?label=gen173nr-1DCAsoRjiLA0gzWARoRogBAZgBCrgBF8gBDNgBA-gBAfgBAogCAagCA7gC0NvZ5AXAAgE;sid=bed493c85d8693a2b7074f734f20b8fc;closed_msg=584507;dest_id=-372490;dest_type=city;hlrd=14&"
 scrapt_booking.inicia_scrapring(sisapUrl)
 
-with open('hotels.csv','w',newline='') as f:
+with open('HotelsBarcelonaBooking.csv','w',newline='') as f:
 	writer = csv.writer(f)
 	writer.writerows(scrapt_booking.llista_hotels)
 f.close()
 
 #Convertim a datafame per problemes d'encoding de la categorització de comentario.
 df = pd.DataFrame(scrapt_booking.llista_comentaris)
-df.to_csv('comentaris.csv', index=False, header=False)
+df.to_csv('ComentarisXHotelsBarcelonaBooking.csv', index=False, header=False)
 
 #Convertim a datafame per problemes d'encoding de la categorització de comentario.
 df = pd.DataFrame(scrapt_booking.llista_categoria_comentaris)
-df.to_csv('llista_categories_comentaris.csv', index=False, header=False)
+df.to_csv('CategoriesXComentariBooking.csv', index=False, header=False)

@@ -219,9 +219,9 @@ Propietari : {
     "NS2.BKNGS.COM",
     "NS3.BKNGS.COM",
     "ns3.bkngs.com",
-    "ns2.bkngs.com",
     "ns1.bkngs.com",
-    "ns0.bkngs.com"
+    "ns0.bkngs.com",
+    "ns2.bkngs.com"
   ],
   "status": [
     "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",

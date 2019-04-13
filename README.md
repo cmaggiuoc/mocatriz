@@ -65,8 +65,8 @@ on només hi ha les urls del fitxers '.xml' per si cal tractar-les després.
 # 2. Definir un títol pel dataset. Triar un títol que sigui descriptiu.
 ## HotelsBarcelonaBooking | ComentarisXHotelsBarcelonaBooking | CategoriesXComentariBooking
 # 3. Descripció del dataset. Desenvolupar una descripció breu del conjunt de dades
-que s'ha extret (és necessari que aquesta descripció tingui sentit amb el títol
-triat).
+# que s'ha extret (és necessari que aquesta descripció tingui sentit amb el títol
+# triat).
 Hem creat 3 datasets donada la informació que consideravem interessant descarregar i la naturalessa de la mateixa  
 conceptualment hem creat el dataset de HotelsBarcelonaBooking el dataset ComentarisXHotelsBarcelonaBooking que extreu  
 tots els comentaris que hem trobat i finalment el Dataset CategoriesXComentariBooking que obté la categorització per  
@@ -77,22 +77,53 @@ dataset visualment
 
 Consultar GraficExplicatiu.png
 
-# 5. Contingut. Explicar els camps que inclou el dataset, el període de temps de les
-dades i com s'ha recollit.
+# 5. Contingut. Explicar els camps que inclou el dataset, el període de temps de les dades i com s'ha recollit.
 
-##HotelsBarcelonaBooking
+Agafem a partir d'un enllaç de búsqueda genèric (anàcronic) el conjunt de hotels de barcelona, i d'aquí recollim el conjunt de comentaris  
+que estan vinculats a aquest hotels accesibles (creiem que no tots són accesibles) i per cada comentari agafem les categories que el categoritzem
+i creem un fitxer per tal d'establir un "model relacional" entre datasets
+
+## HotelsBarcelonaBooking
 
 IdHotel:  *BigInt* que identifica de manera únivoca el hotel
-Estrelles: *Int* Número d'estrelles, en cas que n'hi hagi
-Nota: *Float* Nota promig de l'hotel
-Nom: *String* Nom de l'hotel
-Link: *String* Url de la página de l'hotel
+Estrelles: *Int* Número d'estrelles, en cas que n'hi hagi  
+Nota: *Float* Nota promig de l'hotel  
+Nom: *String* Nom de l'hotel  
+Link: *String* Url de la página de l'hotel  
 
+## ComentarisXHotelsBarcelonaBooking
 
-# 6. Agraïments. Presentar el propietari del conjunt de dades. És necessari incloure
-cites de recerca o anàlisis anteriors (si n'hi ha).
+IdHotel: *BigInt* que identifica de manera únivoca el hotel  
+IdIteració: *Int* Primera part que identifica un comentari (iteració llista comentaris)  
+Index: *Int* Segon part d'identificació de comentari (número de comentari dins la iteració)   
+NomHotel: *String* Nom de l'hotel    
+Nota:  *Float* Nota que otorga el comentari de l'hotel   
+Comentari Postiu: *Text* Comentari positiu si n'hi ha
+Comentari Negatiu: *Text* Comentari negatiu si n'hi ha  
+Data Comentari: *Date* Data enregistrada del comentari  
+
+## CategoriesXComentariBooking
+
+Un comentari pot estar categoritzat per una o més categories.
+
+IdHotel: *BigInt* que identifica de manera únivoca el hotel  
+IdIteració: *Int* Primera part que identifica un comentari (iteració llista comentaris)  
+Index: *Int* Segon part d'identificació de comentari (número de comentari dins la iteració)  
+Categoria: *Text*  Categoria que amb el que s'ha categoritzat el comentari   
+ 
+
+# 6. Agraïments. Presentar el propietari del conjunt de dades. És necessari incloure cites de recerca o anàlisis anteriors (si n'hi ha).
+
+Agraim a Booking.com poder scrapejar aquests datasets
+
 # 7. Inspiració. Explicar per què és interessant aquest conjunt de dades i quines
 preguntes es pretenen respondre.
+
+Farem una explicació en funció de les persones que poden tenir un interés respecte l'activitat comercial en qüestió
+
+**Propietari hotel**: poder fer un seguiment, planificant un scraping diari, de com evoluciona la nota del seu hotel i la de les seus competidors.
+**Client Hotel**: Comparar en funció de la categorització dels comentaris aquells hotels que tinguin una millor nota.
+
 # 8. Llicència. Seleccionar una d'aquestes llicències pel dataset resultant i explicar
 el motiu de la seva selecció:
 ○ Released Under CC0: Public Domain License

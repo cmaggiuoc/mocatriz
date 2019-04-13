@@ -10,6 +10,8 @@ import sys
 from datetime import datetime
 from datetime import timedelta
 from bs4 import BeautifulSoup
+from Hotels import hotels_scrapping
+import pandas as pd
 
 
 print('Avaluem el robots.txt')

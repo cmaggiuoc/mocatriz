@@ -192,7 +192,7 @@ Disallow: /sitembk-dsf-index-destinationfinder-https.xml
 Disallow: /sitembk-discover-https-index.xml
 
 Tecnologia : {'web-servers': ['Nginx'], 'javascript-frameworks': ['Prototype', 'RequireJS', 'jQuery']}
-Grandaria : Aproximadamente 53.400.000 resultados
+Grandaria : Aproximadamente 58.500.000 resultados
 Propietari : {
   "domain_name": [
     "BOOKING.COM",
@@ -203,25 +203,25 @@ Propietari : {
   "referral_url": null,
   "updated_date": [
     "2014-05-28 15:42:13",
-    "2017-01-25 12:34:54-08:00"
+    "2017-01-25 12:34:54"
   ],
   "creation_date": [
     "1998-04-17 04:00:00",
-    "1998-04-16 21:00:00-07:00"
+    "1998-04-16 21:00:00"
   ],
   "expiration_date": [
     "2020-04-16 04:00:00",
-    "2020-04-15 21:00:00-07:00"
+    "2020-04-15 21:00:00"
   ],
   "name_servers": [
     "NS0.BKNGS.COM",
     "NS1.BKNGS.COM",
     "NS2.BKNGS.COM",
     "NS3.BKNGS.COM",
-    "ns1.bkngs.com",
-    "ns0.bkngs.com",
+    "ns3.bkngs.com",
     "ns2.bkngs.com",
-    "ns3.bkngs.com"
+    "ns1.bkngs.com",
+    "ns0.bkngs.com"
   ],
   "status": [
     "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",

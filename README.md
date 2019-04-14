@@ -36,14 +36,9 @@ A la carpeta [src](https://github.com/cmaggiuoc/mocatriz/tree/master/src) trobem
 **Hotels.py** classe per scrapejar els Hotels, a través d'un link fix de cerca (i paginació)  
 **Comments.py** classe per scrapejar els comentaris, a través d'un link de sitemap amb una estructura determinada (i paginació)
 
-A la carpeta [CSV](https://github.com/cmaggiuoc/mocatriz/tree/master/CSV) trobem els fitxers csv sortida del  
-scraping.  
-
-A la carpeta [FitxersContext](https://github.com/cmaggiuoc/mocatriz/tree/master/FitxersContext) trobem els
-fitxers generats en l'extració de robots, sitemap, whois
-
-A la carpeta [recursos](https://github.com/cmaggiuoc/mocatriz/tree/master/recursos) trobem els recursos  
-imatges, o codi python per actualitzar a la versió 3.
+A la carpeta [CSV](https://github.com/cmaggiuoc/mocatriz/tree/master/CSV) trobem els fitxers csv sortida del scraping.  
+A la carpeta [FitxersContext](https://github.com/cmaggiuoc/mocatriz/tree/master/FitxersContext) trobem els fitxers generats en l'extració de robots, sitemap, whois, etc..  
+A la carpeta [recursos](https://github.com/cmaggiuoc/mocatriz/tree/master/recursos) trobem els recursos imatges, o codi python per actualitzar a la versió 3.  
 
 # Descripció de la Pràctica a realitzar
 L'objectiu d'aquesta practica és la creació d'un dataset a partir de les dades

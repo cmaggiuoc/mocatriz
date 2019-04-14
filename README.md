@@ -83,8 +83,10 @@ cadasqun dels comentaris.
 
 # 5. Contingut. Explicar els camps que inclou el dataset, el període de temps de les dades i com s'ha recollit.
 
-Agafem a partir d'un enllaç de búsqueda genèric (anàcronic) el conjunt de hotels de barcelona, i d'aquí recollim el conjunt  
-de comentaris que estan vinculats a aquest hotels accesibles (creiem que no tots són accesibles) i per cada comentari agafem les categories que el categoritzem i creem un fitxer per tal d'establir un "model relacional" entre datasets
+Agafem a partir d'un enllaç de búsqueda genèric (sense referència temporal) el conjunt de hotels de barcelona,  
+i d'aquí recollim el conjunt de comentaris que estan vinculats a aquest hotels accesibles (creiem que no  
+tots els publicats són accesibles) i per cada comentari agafem les categories que el categoritzem i creem un  
+fitxer per tal d'establir un "model relacional" entre datasets
 
 ## HotelsBarcelonaBooking
 
@@ -140,7 +142,8 @@ En el directori src podem trobar el codi generat :
 
 # 10. Dataset. Presentar el dataset en format CSV
 
-En el directori src podrem trobar els tres datasets : 
+En el directori src podrem trobar els tres datasets :  
+
 **HotelsBarcelonaBooking**  
 **CategoriesXComentariBooking.csv**  
 **ComentarisXHotelsBarcelonaBooking.csv**

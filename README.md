@@ -29,20 +29,20 @@ from bs4 import BeautifulSoup
 L'scrip pot scrapejar tots els hotels o bé es por limitar a un nombre d'hotels (mútiple de 15 per la paginació de Booking).  
 La sintaxis es'ha ejecutar de la següent manera : python main.py --nhotels numero_hotels
 
-##Estructura
+## Estructura
 
 A la carpeta [src](https://github.com/cmaggiuoc/mocatriz/tree/master/src) trobem els fitxers de codi font:  
 **main.py** arxiu principal a que es crida per començar scraping python main.py --nhotels numero_hotels  
 **Hotels.py** classe per scrapejar els Hotels, a través d'un link fix de cerca (i paginació)  
 **Comments.py** classe per scrapejar els comentaris, a través d'un link de sitemap amb una estructura determinada (i paginació)
 
-A la carpeta [CSV] (https://github.com/cmaggiuoc/mocatriz/tree/master/CSV) trobem els fitxers csv sortida del  
+A la carpeta [CSV](https://github.com/cmaggiuoc/mocatriz/tree/master/CSV) trobem els fitxers csv sortida del  
 scraping.  
 
-A la carpeta [FitxersContext] (https://github.com/cmaggiuoc/mocatriz/tree/master/FitxersContext) trobem els
+A la carpeta [FitxersContext](https://github.com/cmaggiuoc/mocatriz/tree/master/FitxersContext) trobem els
 fitxers generats en l'extració de robots, sitemap, whois
 
-A la carpeta [recursos] (https://github.com/cmaggiuoc/mocatriz/tree/master/recursos) trobem els recursos  
+A la carpeta [recursos](https://github.com/cmaggiuoc/mocatriz/tree/master/recursos) trobem els recursos  
 imatges, o codi python per actualitzar a la versió 3.
 
 # Descripció de la Pràctica a realitzar

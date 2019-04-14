@@ -138,9 +138,9 @@ En el directori src podem trobar el codi generat :
 
 # 10. Dataset. Presentar el dataset en format CSV
 
-En el directori src podrem trobar els tres datasets  
-**HotelsBarcelonaBooking**
-**CategoriesXComentariBooking.csv**
+En el directori src podrem trobar els tres datasets : 
+**HotelsBarcelonaBooking**  
+**CategoriesXComentariBooking.csv**  
 **ComentarisXHotelsBarcelonaBooking.csv**
 
 

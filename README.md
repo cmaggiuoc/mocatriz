@@ -32,9 +32,9 @@ La sintaxis es'ha ejecutar de la següent manera : python main.py --nhotels nume
 ## Estructura
 
 A la carpeta [src](https://github.com/cmaggiuoc/mocatriz/tree/master/src) trobem els fitxers de codi font:  
-**main.py**(https://github.com/cmaggiuoc/mocatriz/tree/master/src/main.py) arxiu principal a que es crida per començar scraping python main.py --nhotels numero_hotels  
-**Hotels.py**(https://github.com/cmaggiuoc/mocatriz/tree/master/src/Hotels.py) classe per scrapejar els Hotels, a través d'un link fix de cerca (i paginació)  
-**Comments.py**(https://github.com/cmaggiuoc/mocatriz/tree/master/src/Comments.py) classe per scrapejar els comentaris, a través d'un link de sitemap amb una estructura determinada (i paginació)
+[main.py](https://github.com/cmaggiuoc/mocatriz/tree/master/src/main.py) arxiu principal a que es crida per començar scraping python main.py --nhotels numero_hotels  
+[Hotels.py](https://github.com/cmaggiuoc/mocatriz/tree/master/src/Hotels.py) classe per scrapejar els Hotels, a través d'un link fix de cerca (i paginació)  
+[Comments.py](https://github.com/cmaggiuoc/mocatriz/tree/master/src/Comments.py) classe per scrapejar els comentaris, a través d'un link de sitemap amb una estructura determinada (i paginació)
 
 A la carpeta [CSV](https://github.com/cmaggiuoc/mocatriz/tree/master/CSV) trobem els fitxers csv sortida del scraping.  
 A la carpeta [FitxersContext](https://github.com/cmaggiuoc/mocatriz/tree/master/FitxersContext) trobem els fitxers generats en l'extració de robots, sitemap, whois, etc..  

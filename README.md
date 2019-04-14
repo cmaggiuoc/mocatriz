@@ -79,6 +79,8 @@ cadasqun dels comentaris.
 
 Consultar GraficExplicatiu.png
 
+![Consultar GraficExplicatiu.png](/GraficExplicatiuDataset.png "Gràfic explicatiu Dataset")
+
 # 5. Contingut. Explicar els camps que inclou el dataset, el període de temps de les dades i com s'ha recollit.
 
 Agafem a partir d'un enllaç de búsqueda genèric (anàcronic) el conjunt de hotels de barcelona, i d'aquí recollim el conjunt  

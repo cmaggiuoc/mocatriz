@@ -26,7 +26,8 @@ from datetime import datetime
 from datetime import timedelta
 from bs4 import BeautifulSoup
 ```
-L'scrip s'ha ejecutar de la següent manera : python main.py --nhotels 30
+L'scrip pot scrapejar tots els hotels o bé es por limitar a un nombre d'hotels (mútiple de 15 per la paginació de Booking).  
+La sintaxis es'ha ejecutar de la següent manera : python main.py --nhotels numero_hotels
 
 # Descripció de la Pràctica a realitzar
 L'objectiu d'aquesta practica és la creació d'un dataset a partir de les dades

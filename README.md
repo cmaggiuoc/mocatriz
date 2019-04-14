@@ -29,6 +29,22 @@ from bs4 import BeautifulSoup
 L'scrip pot scrapejar tots els hotels o bé es por limitar a un nombre d'hotels (mútiple de 15 per la paginació de Booking).  
 La sintaxis es'ha ejecutar de la següent manera : python main.py --nhotels numero_hotels
 
+##Estructura
+
+A la carpeta [src](https://github.com/cmaggiuoc/mocatriz/tree/master/src) trobem els fitxers de codi font:  
+**main.py** arxiu principal a que es crida per començar scraping python main.py --nhotels numero_hotels  
+**Hotels.py** classe per scrapejar els Hotels, a través d'un link fix de cerca (i paginació)  
+**Comments.py** classe per scrapejar els comentaris, a través d'un link de sitemap amb una estructura determinada (i paginació)
+
+A la carpeta [CSV] (https://github.com/cmaggiuoc/mocatriz/tree/master/CSV) trobem els fitxers csv sortida del  
+scraping.  
+
+A la carpeta [FitxersContext] (https://github.com/cmaggiuoc/mocatriz/tree/master/FitxersContext) trobem els
+fitxers generats en l'extració de robots, sitemap, whois
+
+A la carpeta [recursos] (https://github.com/cmaggiuoc/mocatriz/tree/master/recursos) trobem els recursos  
+imatges, o codi python per actualitzar a la versió 3.
+
 # Descripció de la Pràctica a realitzar
 L'objectiu d'aquesta practica és la creació d'un dataset a partir de les dades
 contingudes en un enllaç de la web ***www.booking.com*** , concretament del hotels de Barcelona,
@@ -80,7 +96,7 @@ cadasqun dels comentaris.
 
 
 
-![Consultar GraficExplicatiu.png](/src/GraficExplicatiuDataset.png "Gràfic explicatiu Dataset")
+![Consultar GraficExplicatiu.png](/recursos/GraficExplicatiuDataset.png "Gràfic explicatiu Dataset")
 
 # 5. Contingut. Explicar els camps que inclou el dataset, el període de temps de les dades i com s'ha recollit.
 

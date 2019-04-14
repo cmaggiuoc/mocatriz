@@ -43,7 +43,7 @@ A la carpeta [recursos](https://github.com/cmaggiuoc/mocatriz/tree/master/recurs
 # Descripció de la Pràctica a realitzar
 L'objectiu d'aquesta practica és la creació d'un dataset a partir de les dades
 contingudes en un enllaç de la web ***www.booking.com*** , concretament del hotels de Barcelona,
-per tal de limitar la mida del resultats.
+per tal de limitar la mida del resultats. Aquest és el [pdf](https://github.com/cmaggiuoc/mocatriz/blob/master/PRAC_1_THEMAGGICIANS-TICD.pdf) amb la respostes
 ## A partir del número d'hotels demanats es crean aquest fitxers 
 ### HotelsBarcelonaBooking.csv
 Dataset que inclou la llista d'hotels trobats.

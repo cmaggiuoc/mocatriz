@@ -135,10 +135,10 @@ de la mateixa manera que nosaltres hem obtingut les dades en obert, nosaltres pe
 que pot ser útil per a tercers
 
 # 9. Codi. Adjuntar el codi amb el qual s'ha generat el dataset, preferiblement en Python o, alternativament, en R.
-En el directori src podem trobar el codi generat :
-**Main.py**		: Programa principal amb un paràmetre. Cal ejecutarlo : main.py --nhotels 30
-**Comments**	: Classe que recull i guarda els comentaris al dataset *ComentarisXHotelsBarcelonaBooking*
-**Hotels**		: Classe que recull i guarda les dades genèriques de l'Hotel 
+En el directori src podem trobar el codi generat :  
+**Main.py**		: Programa principal amb un paràmetre. Cal ejecutarlo : main.py --nhotels 30  
+**Comments**	: Classe que recull i guarda els comentaris al dataset *ComentarisXHotelsBarcelonaBooking*  
+**Hotels**		: Classe que recull i guarda les dades genèriques de l'Hotel   
 
 # 10. Dataset. Presentar el dataset en format CSV
 

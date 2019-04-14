@@ -32,7 +32,7 @@ L'scrip s'ha ejecutar de la següent manera : python main.py --nhotels 30
 L'objectiu d'aquesta practica és la creació d'un dataset a partir de les dades
 contingudes en un enllaç de la web ***www.booking.com*** , concretament del hotels de Barcelona,
 per tal de limitar la mida del resultats.
-A partir del numero d'hotels demanats es crean aquest fitxers 
+A partir del número d'hotels demanats es crean aquest fitxers 
 ### HotelsBarcelonaBooking.csv
 Dataset que inclou la llista d'hotels trobats-
 ### ComentarisXHotelsBarcelonaBooking.csv
@@ -74,44 +74,42 @@ conceptualment hem creat el dataset de HotelsBarcelonaBooking el dataset Comenta
 tots els comentaris que hem trobat i finalment el Dataset CategoriesXComentariBooking que obté la categorització per  
 cadasqun dels comentaris. 
 
-# 4. Representació gràfica. Presentar una imatge o esquema que identifiqui el
-dataset visualment
+# 4. Representació gràfica. Presentar una imatge o esquema que identifiqui el dataset visualment
 
 Consultar GraficExplicatiu.png
 
 # 5. Contingut. Explicar els camps que inclou el dataset, el període de temps de les dades i com s'ha recollit.
 
 Agafem a partir d'un enllaç de búsqueda genèric (anàcronic) el conjunt de hotels de barcelona, i d'aquí recollim el conjunt  
-de comentaris que estan vinculats a aquest hotels accesibles (creiem que no tots són accesibles) i per cada comentari agafem  
-les categories que el categoritzem i creem un fitxer per tal d'establir un "model relacional" entre datasets
+de comentaris que estan vinculats a aquest hotels accesibles (creiem que no tots són accesibles) i per cada comentari agafem les categories que el categoritzem i creem un fitxer per tal d'establir un "model relacional" entre datasets
 
 ## HotelsBarcelonaBooking
 
-IdHotel:  *BigInt* que identifica de manera únivoca el hotel
-Estrelles: *Int* Número d'estrelles, en cas que n'hi hagi  
-Nota: *Float* Nota promig de l'hotel  
-Nom: *String* Nom de l'hotel  
-Link: *String* Url de la página de l'hotel  
+IdHotel		: *BigInt* que identifica de manera únivoca el hotel
+Estrelles	: *Int* Número d'estrelles, en cas que n'hi hagi  
+Nota		: *Float* Nota promig de l'hotel  
+Nom			: *String* Nom de l'hotel  
+Link		: *String* Url de la página de l'hotel  
 
 ## ComentarisXHotelsBarcelonaBooking
 
-IdHotel: *BigInt* que identifica de manera únivoca el hotel  
-IdIteració: *Int* Primera part que identifica un comentari (iteració llista comentaris)  
-Index: *Int* Segon part d'identificació de comentari (número de comentari dins la iteració)   
-NomHotel: *String* Nom de l'hotel    
-Nota:  *Float* Nota que otorga el comentari de l'hotel   
-Comentari Postiu: *Text* Comentari positiu si n'hi ha
-Comentari Negatiu: *Text* Comentari negatiu si n'hi ha  
-Data Comentari: *Date* Data enregistrada del comentari  
+IdHotel				: *BigInt*	Identifica de manera únivoca el hotel  
+IdIteració			: *Int* 	Primera part que identifica un comentari (iteració llista comentaris)  
+Index				: *Int*		Segon part d'identificació de comentari (número de comentari dins la iteració)   
+NomHotel			: *String*	Nom de l'hotel    
+Nota				: *Float*	Nota que otorga el comentari de l'hotel   
+Comentari Postiu	: *Text* 	Comentari positiu si n'hi ha
+Comentari Negatiu	: *Text* 	Comentari negatiu si n'hi ha  
+Data Comentari		: *Date* 	Data enregistrada del comentari  
 
 ## CategoriesXComentariBooking
 
 Un comentari pot estar categoritzat per una o més categories.
 
-IdHotel: *BigInt* que identifica de manera únivoca el hotel  
-IdIteració: *Int* Primera part que identifica un comentari (iteració llista comentaris)  
-Index: *Int* Segon part d'identificació de comentari (número de comentari dins la iteració)  
-Categoria: *Text*  Categoria que amb el que s'ha categoritzat el comentari   
+IdHotel		: *BigInt*	Identifica de manera únivoca el hotel  
+IdIteració	: *Int* 	Primera part que identifica un comentari (iteració llista comentaris)  
+Index		: *Int* 	Segon part d'identificació de comentari (número de comentari dins la iteració)  
+Categoria	: *Text*  	Categoria  amb la que s'ha categoritzat el comentari   
  
 
 # 6. Agraïments. Presentar el propietari del conjunt de dades. És necessari incloure cites de recerca o anàlisis anteriors (si n'hi ha).
@@ -122,8 +120,8 @@ Agraim a Booking.com poder scrapejar aquests datasets
 
 Farem una explicació en funció de les persones que poden tenir un interés respecte l'activitat comercial en qüestió
 
-**Propietari hotel**: poder fer un seguiment, planificant un scraping diari, de com evoluciona la nota del seu hotel i la de les seus competidors.  
-**Client Hotel**: Comparar en funció de la categorització dels comentaris aquells hotels que tinguin una millor nota.
+**Propietari hotel**: Poder fer un seguiment, planificant un scraping diari, de com evoluciona la nota del seu hotel i la de les seus competidors.  
+**Client Hotel**	: Comparar en funció de la categorització dels comentaris aquells hotels que tinguin una millor nota.
 
 # 8. Llicència. Seleccionar una d'aquestes llicències pel dataset resultant i explicar el motiu de la seva selecció:
 
@@ -131,11 +129,21 @@ Triem la llicència ***Released Under CC0: Public Domain License*** perquè
 de la mateixa manera que nosaltres hem obtingut les dades en obert, nosaltres pensem  
 que pot ser útil per a tercers
 
-# 9. Codi. Adjuntar el codi amb el qual s'ha generat el dataset, preferiblement en
-Python o, alternativament, en R
+# 9. Codi. Adjuntar el codi amb el qual s'ha generat el dataset, preferiblement en Python o, alternativament, en R.
+En el directori src podem trobar el codi generat :
+**Main.py**		: Programa principal amb un paràmetre. Cal ejecutarlo : main.py --nhotels 30
+**Comments**	: Classe que recull i guarda els comentaris al dataset *ComentarisXHotelsBarcelonaBooking*
+**Hotels**		: Classe que recull i guarda les dades genèriques de l'Hotel 
 
-.
 # 10. Dataset. Presentar el dataset en format CSV
+
+En el directori src podrem trobar els tres datasets  
+**HotelsBarcelonaBooking**
+**CategoriesXComentariBooking.csv**
+**ComentarisXHotelsBarcelonaBooking.csv**
+
+
+
 
 
 

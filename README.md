@@ -39,10 +39,10 @@ Dataset que inclou la llista d'hotels trobats.
 Dataset de comentaris per hotel de hotels.csv
 ### CategoriesXComentariBooking.csv
 Categories assoacides a un comentari d'un hotel, una fila de comentaris.csv.
-## També es crean aquest do fitxers .txt amb la infomració sobre el contexte.
+## També es crean aquest dos fitxers .txt amb la infomració sobre el contexte.
 ### Consideracions.txt 
 Contingut de totes les dades relacionades amb el context.  
-### urls_xml.txt
+### urls.txt
 Urls dels sitemap, per si cal tractar-les més endevant.
 
 

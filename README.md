@@ -32,13 +32,15 @@ L'scrip s'ha ejecutar de la següent manera : python main.py --nhotels 30
 L'objectiu d'aquesta practica és la creació d'un dataset a partir de les dades
 contingudes en un enllaç de la web ***www.booking.com*** , concretament del hotels de Barcelona,
 per tal de limitar la mida del resultats.
-A partir del número d'hotels demanats es crean aquest fitxers 
+## A partir del número d'hotels demanats es crean aquest fitxers 
 ### HotelsBarcelonaBooking.csv
-Dataset que inclou la llista d'hotels trobats-
+Dataset que inclou la llista d'hotels trobats.
 ### ComentarisXHotelsBarcelonaBooking.csv
 Dataset de comentaris per hotel de hotels.csv
 ### CategoriesXComentariBooking.csv
-Categories assoacides a un comentari d'un hotel, una fila de comentaris.csv
+Categories assoacides a un comentari d'un hotel, una fila de comentaris.csv  
+##També es crean aquest do fitxers .txt amb la infomració sobre el contexte.
+
 ### Consideracions.txt 
 Contingut de totes les dades relacionades amb el context.  
 ### urls_xml.txt

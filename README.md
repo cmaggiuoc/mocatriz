@@ -77,9 +77,9 @@ cadasqun dels comentaris.
 
 # 4. Representació gràfica. Presentar una imatge o esquema que identifiqui el dataset visualment
 
-Consultar GraficExplicatiu.png
 
-![Consultar GraficExplicatiu.png](/GraficExplicatiuDataset.png "Gràfic explicatiu Dataset")
+
+![Consultar GraficExplicatiu.png](/src/GraficExplicatiuDataset.png "Gràfic explicatiu Dataset")
 
 # 5. Contingut. Explicar els camps que inclou el dataset, el període de temps de les dades i com s'ha recollit.
 
